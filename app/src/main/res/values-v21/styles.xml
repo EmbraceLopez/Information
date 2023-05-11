@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!--sdk21以上主题-->
+    <style name="AppTheme" parent="BaseAppTheme">
+
+        <!--21 以上设置状态栏颜色-->
+        <item name="android:statusBarColor">@color/colorPrimary</item>
+        <!--默认背景色-->
+        <item name="android:windowBackground">@color/colorBaseBg</item>
+        <!--不绘制系统栏-->
+        <item name="android:windowDrawsSystemBarBackgrounds">true</item>
+        <item name="android:navigationBarColor">@color/black</item>
+    </style>
+
+</resources>

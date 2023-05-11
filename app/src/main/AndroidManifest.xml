@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.le.info">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+
+    <application
+        android:name=".base.MyApplication"
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:supportsRtl="true"
+        android:theme="@style/BaseAppTheme"
+        android:usesCleartextTraffic="true">  <!--禁用掉明文流量请求的检查-->
+        <activity
+            android:name=".activity.SplashActivity"
+            android:exported="true"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait"
+            android:theme="@style/SplashTheme">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <activity
+                android:name=".activity.MainActivity"
+                android:label="主页"
+                android:launchMode="singleTask"
+                android:screenOrientation="portrait"
+                android:windowSoftInputMode="stateAlwaysHidden|adjustResize" />
+        <activity
+                android:name=".activity.LoginSmsActivity"
+                android:label="短信登录"
+                android:screenOrientation="portrait"/>
+        <activity
+                android:name=".activity.LoginPwdActivity"
+                android:label="密码登录"
+                android:screenOrientation="portrait" />
+        <activity
+                android:name=".activity.PersonalActivity"
+                android:label="个人中心"
+                android:screenOrientation="portrait" />
+        <activity
+                android:name=".activity.H5Activity"
+                android:label="资讯详情"
+                android:screenOrientation="portrait" />
+        <activity
+                android:name=".activity.GetBackPwdActivity"
+                android:label="找回密码"
+                android:screenOrientation="portrait" />
+        <activity
+                android:name=".activity.MyMsgActivity"
+                android:label="我的资料"
+                android:screenOrientation="portrait" />
+        <activity
+                android:name=".activity.SettingActivity"
+                android:label="设置"
+                android:screenOrientation="portrait" />
+        <activity
+                android:name=".activity.SearchActivity"
+                android:label="搜索"
+                android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.CommentActivity"
+            android:label="评论"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.ModifyPwdActivity"
+            android:label="修改密码"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.AboutActivity"
+            android:label="关于我们"
+            android:screenOrientation="portrait" />
+
+        <!--FileProvider-->
+        <provider
+            android:name="androidx.core.content.FileProvider"
+            android:authorities="${applicationId}.fileprovider"
+            android:exported="false"
+            android:grantUriPermissions="true">
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/file_paths" />
+        </provider>
+
+    </application>
+
+</manifest>

@@ -1,0 +1,106 @@
+apply plugin: 'com.android.application'
+
+
+android {
+
+    sourceSets {
+        main {
+            jniLibs.srcDirs = ['libs']
+        }
+    }
+
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_11
+        targetCompatibility JavaVersion.VERSION_11
+    }
+
+    compileSdkVersion rootProject.ext.compileSdkVersion
+
+    defaultConfig {
+        applicationId rootProject.ext.applicationId
+        minSdkVersion rootProject.ext.minSdkVersion
+        targetSdkVersion rootProject.ext.targetSdkVersion
+        versionCode rootProject.ext.versionCode
+        versionName rootProject.ext.versionName
+        testInstrumentationRunner 'androidx.test.runner.AndroidJUnitRunner'
+        multiDexEnabled true
+
+        //butterknife注解问题
+        //javaCompileOptions { annotationProcessorOptions { includeCompileClasspath = true } }
+
+    }
+    buildTypes {
+        release {
+            //Zipalign优化
+//            zipAlignEnabled true
+            // 移除无用的resource文件
+//            shrinkResources true
+            //打包混淆
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+
+        debug {
+            minifyEnabled false
+        }
+    }
+
+    // 修改apk build的名字 多渠道时app-${defaultConfig.versionName}-${variant.flavorName}.apk
+    android.applicationVariants.all { variant ->
+        variant.outputs.all {
+            if (outputFileName.endsWith('debug.apk')) {
+                outputFileName = "campus_info" + defaultConfig.versionName + "_debug.apk"
+            } else if (outputFileName.endsWith('.apk')) {
+                outputFileName = "campus_info" + defaultConfig.versionName + ".apk"
+            }
+        }
+    }
+
+    repositories {
+        flatDir { dirs 'libs' }
+    }
+
+}
+
+dependencies {
+
+    implementation 'androidx.appcompat:appcompat:1.2.0'
+    implementation 'com.google.android.material:material:1.3.0'
+    implementation 'androidx.constraintlayout:constraintlayout:2.0.4'
+    implementation 'androidx.legacy:legacy-support-v4:1.0.0'
+    testImplementation 'junit:junit:4.12'
+    androidTestImplementation 'androidx.test.ext:junit:1.1.2'
+    androidTestImplementation 'androidx.test.espresso:espresso-core:3.3.0'
+
+    implementation 'com.jakewharton:butterknife:10.1.0'  //绑定视图
+    annotationProcessor 'com.jakewharton:butterknife-compiler:10.1.0' //绑定视图
+    implementation 'com.github.bumptech.glide:glide:4.11.0'  //图片加载器
+    annotationProcessor 'com.github.bumptech.glide:compiler:4.11.0' //图片加载器
+    implementation 'com.github.chrisbanes:PhotoView:2.3.0'
+    implementation 'io.github.joker-fu:EasyPhotos:andX-2.5.7'
+    implementation 'com.youth.banner:banner:1.4.10'  //轮播图
+    implementation 'q.rorbin:badgeview:1.1.3'  //消息红点提示
+    implementation 'com.github.CymChad:BaseRecyclerViewAdapterHelper:2.9.41'  //recyclerview适配器
+    implementation 'com.contrarywind:Android-PickerView:3.2.6'
+
+    implementation 'androidx.multidex:multidex:2.0.0'
+    implementation 'com.github.mcxtzhang:SwipeDelMenuLayout:V1.3.0'
+    implementation 'com.kongzue.dialog:dialog:2.4.8' //对话框
+    implementation 'com.github.GrenderG:Toasty:1.2.5'
+    implementation 'com.google.android:flexbox:1.0.0'
+    implementation 'com.alibaba:fastjson:1.2.61'
+    implementation 'com.just.agentweb:agentweb:4.0.2'  //webView
+    implementation 'org.bouncycastle:bcprov-jdk15on:1.55'
+    implementation 'org.apache.commons:commons-lang3:3.5'
+    implementation 'com.gyf.immersionbar:immersionbar:3.0.0' //状态栏沉浸式
+
+    implementation 'com.squareup.okhttp3:okhttp:4.9.2'
+    implementation 'io.reactivex.rxjava2:rxandroid:2.1.1'
+    implementation 'com.jakewharton.retrofit:retrofit2-rxjava2-adapter:1.0.0'
+    implementation 'com.squareup.retrofit2:converter-gson:2.9.0'
+    implementation 'com.lzy.net:okgo:3.0.4'
+    implementation 'com.squareup.okhttp3:logging-interceptor:3.9.1'
+    implementation 'com.safframework.log:saf-logginginterceptor:1.6.0'  //网络请求拦截器
+
+}
+

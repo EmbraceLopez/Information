@@ -1,0 +1,163 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+    android:background="@color/white">
+
+    <include layout="@layout/layout_back_top_bar"/>
+
+    <androidx.core.widget.NestedScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+        <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+            <ImageView
+                    android:id="@+id/iv_head_pic"
+                    android:layout_width="@dimen/dp_66"
+                    android:layout_height="@dimen/dp_66"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginTop="@dimen/dp_40"
+                    android:src="@drawable/ic_default_head2"/>
+
+            <TextView
+                    android:id="@+id/tv_user_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="用户名"
+                    android:textSize="@dimen/sp_18"
+                    android:textColor="@color/colorText2"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginTop="@dimen/dp_16"/>
+
+            <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1px"
+                    android:background="@color/line"
+                    android:layout_marginTop="@dimen/dp_40"/>
+
+            <LinearLayout
+                    android:id="@+id/linear_modify_msg"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/dp_50"
+                    android:gravity="center"
+                    android:paddingHorizontal="@dimen/dp_16"
+                    android:clickable="true"
+                    android:background="@drawable/selector_pressed">
+
+                <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:text="编辑资料"
+                        android:textColor="@color/colorText4"
+                        android:textSize="@dimen/sp_16"
+                        android:layout_weight="1"/>
+
+                <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/ic_right_back"
+                        android:scaleType="fitXY"/>
+
+            </LinearLayout>
+
+            <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1px"
+                    android:background="@color/line"/>
+
+            <LinearLayout
+                android:visibility="gone"
+                    android:id="@+id/linear_my_collect"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/dp_50"
+                    android:gravity="center"
+                    android:paddingHorizontal="@dimen/dp_16"
+                    android:clickable="true"
+                    android:background="@drawable/selector_pressed">
+
+                <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:text="我的收藏"
+                        android:textColor="@color/colorText4"
+                        android:textSize="@dimen/sp_16"
+                        android:layout_weight="1"/>
+
+                <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/ic_right_back"
+                        android:scaleType="fitXY"/>
+
+            </LinearLayout>
+
+            <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1px"
+                    android:background="@color/line"/>
+
+            <LinearLayout
+                android:visibility="gone"
+                    android:id="@+id/linear_browse_history"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/dp_50"
+                    android:gravity="center"
+                    android:paddingHorizontal="@dimen/dp_16"
+                    android:background="@drawable/selector_pressed">
+
+                <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:text="浏览历史"
+                        android:textColor="@color/colorText4"
+                        android:textSize="@dimen/sp_16"
+                        android:layout_weight="1"/>
+
+                <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/ic_right_back"
+                        android:scaleType="fitXY"/>
+
+            </LinearLayout>
+
+            <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1px"
+                    android:background="@color/line"/>
+
+            <LinearLayout
+                    android:id="@+id/linear_set"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/dp_50"
+                    android:gravity="center"
+                    android:paddingHorizontal="@dimen/dp_16"
+                    android:background="@drawable/selector_pressed">
+
+                <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:text="设置"
+                        android:textColor="@color/colorText4"
+                        android:textSize="@dimen/sp_16"
+                        android:layout_weight="1"/>
+
+                <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/ic_right_back"
+                        android:scaleType="fitXY"/>
+
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+    </androidx.core.widget.NestedScrollView>
+
+</LinearLayout>

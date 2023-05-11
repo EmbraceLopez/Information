@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:background="@color/white">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_48"
+        android:background="@color/white">
+
+        <ImageView
+            android:id="@+id/iv_back"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:src="@drawable/ic_black_back"
+            android:paddingEnd="@dimen/dp_10"
+            android:paddingStart="@dimen/dp_14"
+            android:background="?android:attr/selectableItemBackground"
+            android:layout_gravity="center_vertical"/>
+
+        <EditText
+            android:id="@+id/et_search"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/dp_36"
+            android:background="@drawable/shape_edit_bg"
+            android:layout_gravity="center_vertical"
+            android:layout_weight="1"
+            android:layout_marginStart="@dimen/dp_10"
+            android:layout_marginEnd="@dimen/dp_20"
+            android:hint="请输入搜索关键字"
+            android:gravity="center_vertical"
+            android:paddingStart="@dimen/dp_16"
+            android:textColor="@color/colorText2"
+            android:textSize="@dimen/sp_14"/>
+
+        <TextView
+            android:id="@+id/tv_search"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:text="搜索"
+            android:textColor="@color/colorPrimary"
+            android:textSize="@dimen/sp_14"
+            android:textStyle="bold"
+            android:layout_gravity="end|center_vertical"
+            android:paddingEnd="@dimen/dp_14"
+            android:gravity="center_vertical"/>
+
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:background="@color/menu_split_line"
+        android:layout_gravity="bottom"/>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rv"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
+
+</LinearLayout>

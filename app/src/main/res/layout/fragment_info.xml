@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:orientation="vertical"
+        tools:context=".fragment.InfoFragment">
+
+   <FrameLayout
+           android:layout_width="match_parent"
+           android:layout_height="wrap_content"
+           android:paddingTop="@dimen/dp_36"
+           android:paddingHorizontal="@dimen/dp_16"
+           android:background="@drawable/shape_gradient1">
+
+      <FrameLayout
+              android:id="@+id/iv_search"
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:padding="@dimen/dp_10"
+              android:background="?android:attr/selectableItemBackground">
+
+         <ImageView
+                 android:layout_width="@dimen/dp_20"
+                 android:layout_height="@dimen/dp_20"
+                 android:src="@drawable/ic_search"
+                 android:scaleType="fitXY"
+                 android:layout_gravity="center_vertical" />
+
+      </FrameLayout>
+
+      <com.google.android.material.tabs.TabLayout
+              android:id="@+id/tab"
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              app:tabSelectedTextColor="@color/white"
+              app:tabTextColor="@color/colorText2"
+              app:tabTextAppearance="@style/TabLayoutTextStyle"
+              app:tabIndicatorColor="@color/white"
+              app:tabIndicatorFullWidth="true"
+              android:layout_gravity="center" />
+
+      <ImageView
+              android:id="@+id/iv_photo"
+              android:layout_width="@dimen/dp_40"
+              android:layout_height="@dimen/dp_40"
+              android:scaleType="fitXY"
+              android:layout_gravity="end" />
+
+   </FrameLayout>
+
+   <androidx.viewpager.widget.ViewPager
+           android:id="@+id/vp"
+           android:layout_width="match_parent"
+           android:layout_height="match_parent"/>
+
+</LinearLayout>

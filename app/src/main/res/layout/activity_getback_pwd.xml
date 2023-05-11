@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:background="@color/white">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <include layout="@layout/layout_back_top_bar"/>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/dp_30"
+            android:layout_marginTop="@dimen/dp_40">
+
+            <ImageView
+                android:layout_width="@dimen/dp_36"
+                android:layout_height="@dimen/dp_36"
+                android:src="@drawable/ic_login_bg"
+                android:scaleType="fitXY"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="找回密码"
+                android:textColor="@color/colorText2"
+                android:textSize="@dimen/sp_24"
+                android:layout_gravity="center_vertical"
+                android:layout_marginStart="@dimen/dp_6"/>
+
+        </LinearLayout>
+
+        <TextView
+            android:visibility="invisible"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            tools:text="占位"
+            android:textColor="@color/colorText6"
+            android:textSize="@dimen/sp_14"
+            android:layout_marginStart="@dimen/dp_30"
+            android:layout_marginTop="@dimen/dp_10"/>
+
+        <EditText
+            android:id="@+id/et_phone"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp_50"
+            android:textColorHint="@color/colorText6"
+            android:hint="请输入手机号"
+            android:textSize="@dimen/sp_16"
+            android:layout_marginTop="@dimen/dp_40"
+            android:layout_marginHorizontal="@dimen/dp_30"
+            android:inputType="phone"/>
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dp_10"
+            android:layout_marginHorizontal="@dimen/dp_30">
+
+            <EditText
+                android:id="@+id/et_code"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp_50"
+                android:textColorHint="@color/colorText6"
+                android:hint="请输入验证码"
+                android:textSize="@dimen/sp_16"
+                android:inputType="number"/>
+
+            <com.le.info.widget.VerCodeTextView
+                android:id="@+id/tv_get_code"
+                android:layout_width="@dimen/dp_72"
+                android:layout_height="match_parent"
+                android:text="获取验证码"
+                android:textSize="@dimen/sp_14"
+                android:textColor="@color/colorPrimary"
+                android:gravity="center"
+                android:layout_gravity="end"/>
+
+        </FrameLayout>
+
+        <EditText
+            android:id="@+id/et_pwd"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp_50"
+            android:textColorHint="@color/colorText6"
+            android:hint="请输入新密码"
+            android:textSize="@dimen/sp_16"
+            android:layout_marginTop="@dimen/dp_10"
+            android:layout_marginHorizontal="@dimen/dp_30"
+            android:inputType="textPassword"/>
+
+        <Button
+            android:id="@+id/btn_confirm"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp_50"
+            android:layout_marginHorizontal="@dimen/dp_30"
+            android:text="确认修改"
+            android:textColor="@color/white"
+            android:textSize="@dimen/sp_16"
+            android:layout_marginTop="@dimen/dp_30"
+            android:background="@drawable/shape_btn_bg"
+            android:layout_marginBottom="@dimen/dp_10"/>
+
+    </LinearLayout>
+
+</FrameLayout>

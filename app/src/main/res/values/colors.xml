@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!--主色调-->
+    <color name="colorPrimary">#118BD8</color>
+    <color name="colorPrimaryVice">#E87719</color>
+    <color name="colorPrimaryDark">#308CF4</color>
+    <color name="colorAccent">@color/colorPrimary</color>
+
+    <color name="purple_200">#FFBB86FC</color>
+    <color name="purple_500">#FF6200EE</color>
+    <color name="purple_700">#FF3700B3</color>
+    <color name="teal_200">#FF03DAC5</color>
+    <color name="teal_700">#FF018786</color>
+    <color name="black">#FF000000</color>
+    <color name="red">#FF0000</color>
+    <color name="white">#FFFFFFFF</color>
+    <color name="line">#e0e3e9</color>
+    <color name="colorStatus">@color/white</color>
+
+    <color name="colorBaseBg">#F6F6F6</color>
+    <color name="colorText1">#111111</color>
+    <color name="colorText2">#222222</color>
+    <color name="colorText3">#333333</color>
+    <color name="colorText4">#444444</color>
+    <color name="colorText5">#555555</color>
+    <color name="colorText6">#666666</color>
+    <color name="colorText7">#777777</color>
+    <color name="colorText8">#888888</color>
+    <color name="colorText9">#999999</color>
+</resources>

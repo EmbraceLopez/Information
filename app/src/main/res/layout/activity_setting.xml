@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <include layout="@layout/layout_top_bar"/>
+
+    <LinearLayout
+        android:id="@+id/linear_modify_pwd"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_50"
+        android:gravity="center"
+        android:paddingHorizontal="@dimen/dp_16"
+        android:clickable="true"
+        android:background="@drawable/selector_pressed">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="修改密码"
+            android:textColor="@color/colorText4"
+            android:textSize="@dimen/sp_16"
+            android:layout_weight="1"/>
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_right_back"
+            android:scaleType="fitXY"/>
+
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:background="@color/line"/>
+
+    <LinearLayout
+        android:id="@+id/linear_about"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_50"
+        android:gravity="center"
+        android:paddingHorizontal="@dimen/dp_16"
+        android:clickable="true"
+        android:background="@drawable/selector_pressed">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="关于我们"
+            android:textColor="@color/colorText4"
+            android:textSize="@dimen/sp_16"
+            android:layout_weight="1"/>
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_right_back"
+            android:scaleType="fitXY"/>
+
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:background="@color/line"/>
+
+    <LinearLayout
+        android:id="@+id/linear_login_out"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_50"
+        android:gravity="center"
+        android:paddingHorizontal="@dimen/dp_16"
+        android:clickable="true"
+        android:background="@drawable/selector_pressed">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="退出登录"
+            android:textColor="@color/red"
+            android:textSize="@dimen/sp_16"
+            android:layout_weight="1"/>
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_right_back"
+            android:scaleType="fitXY"/>
+
+    </LinearLayout>
+
+</LinearLayout>

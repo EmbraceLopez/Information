@@ -1,0 +1,165 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:background="@color/white">
+
+    <include layout="@layout/layout_top_bar"/>
+
+    <LinearLayout
+        android:id="@+id/linear_pick_head"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="@dimen/dp_40">
+
+        <ImageView
+            android:id="@+id/iv_head_pic"
+            android:layout_width="@dimen/dp_66"
+            android:layout_height="@dimen/dp_66"
+            android:src="@drawable/ic_default_head2"
+            android:scaleType="fitXY"
+            android:layout_gravity="center_horizontal" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="点击更换头像"
+            android:textSize="@dimen/sp_16"
+            android:textColor="@color/colorText2"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="@dimen/dp_16"/>
+
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:background="@color/line"
+        android:layout_marginTop="@dimen/dp_40"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_50"
+        android:gravity="center"
+        android:paddingHorizontal="@dimen/dp_16"
+        android:clickable="true"
+        android:background="@drawable/selector_pressed">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="用户名"
+            android:textColor="@color/colorText4"
+            android:textSize="@dimen/sp_16" />
+
+        <EditText
+            android:id="@+id/et_username"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            tools:text="用户234234"
+            android:textSize="@dimen/sp_14"
+            android:textColor="@color/colorText4"
+            android:layout_gravity="center_vertical"
+            android:background="@null"
+            android:layout_weight="1"
+            android:gravity="end|center_vertical"
+            android:paddingEnd="@dimen/dp_6"/>
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_right_back"
+            android:scaleType="fitXY"/>
+
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:background="@color/line"/>
+
+    <LinearLayout
+        android:id="@+id/linear_select_gender"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_50"
+        android:gravity="center"
+        android:paddingHorizontal="@dimen/dp_16"
+        android:clickable="true"
+        android:background="@drawable/selector_pressed">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="性别"
+            android:textColor="@color/colorText4"
+            android:textSize="@dimen/sp_16"
+            android:layout_weight="1"/>
+
+        <TextView
+            android:id="@+id/tv_gender"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            tools:text="男"
+            android:textSize="@dimen/sp_14"
+            android:textColor="@color/colorText4"
+            android:layout_gravity="center_vertical"
+            android:layout_marginEnd="@dimen/dp_6"/>
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_right_back"
+            android:scaleType="fitXY"/>
+
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:background="@color/line"/>
+
+    <LinearLayout
+        android:id="@+id/linear_select_time"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_50"
+        android:gravity="center"
+        android:paddingHorizontal="@dimen/dp_16"
+        android:clickable="true"
+        android:background="@drawable/selector_pressed">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="生日"
+            android:textColor="@color/colorText4"
+            android:textSize="@dimen/sp_16"
+            android:layout_weight="1"/>
+
+        <TextView
+            android:id="@+id/tv_birthday"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            tools:text="2022-10-1"
+            android:textSize="@dimen/sp_14"
+            android:textColor="@color/colorText4"
+            android:layout_gravity="center_vertical"
+            android:layout_marginEnd="@dimen/dp_6"/>
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_right_back"
+            android:scaleType="fitXY"/>
+
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:background="@color/line"/>
+
+</LinearLayout>
