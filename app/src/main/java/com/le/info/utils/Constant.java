@@ -15,7 +15,7 @@ public class Constant {
     public static final boolean APP_DEBUG = BuildConfig.DEBUG;
 
     //验签密钥
-    public static final String APP_SECRET= "c37Am244P33u0638S563";
+    public static final String APP_SECRET= "";
 
     //完善图片地址
     public static String fillPicPath(String path) {
