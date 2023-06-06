@@ -7,7 +7,7 @@ import androidx.multidex.BuildConfig;
 public class Constant {
 
     //服务器地址
-    public static final String SERVER_URL = "http://campusinfo.shop:8080";
+    public static final String SERVER_URL = "http://example.com";
 
     public static final String BASE_URL = SERVER_URL + "/api/";
 
